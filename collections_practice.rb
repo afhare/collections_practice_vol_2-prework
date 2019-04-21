@@ -39,8 +39,16 @@ def remove_non_strings(array)
   new_array
 end
 
-def count_elements(array)
- 
+def count_elements(data)
+  new_hash = {}
+  data.each do |thing|
+    if new_hash.has_key?(element[:name])
+      new_hash[element[:name]] += 1 
+    else
+      new_hash[element[:name]] = 1 
+    end
+  end
+  new_hash.map { |key, value| {"name" : key , "count": value} }
 end
 
 def merge_data(keys, data)
