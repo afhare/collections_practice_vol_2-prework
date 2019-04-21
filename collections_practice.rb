@@ -42,10 +42,10 @@ end
 def count_elements(data)
   new_hash = {}
   data.each do |thing|
-    if new_hash.has_key?(element[:name])
-      new_hash[element[:name]] += 1 
+    if new_hash.has_key?(thing[:name])
+      new_hash[thing[:name]] += 1 
     else
-      new_hash[element[:name]] = 1 
+      new_hash[thing[:name]] = 1 
     end
   end
   new_hash.map { |key, value| {"name" => key , "count"=> value} }
