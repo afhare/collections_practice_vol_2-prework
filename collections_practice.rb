@@ -48,7 +48,7 @@ def count_elements(data)
       new_hash[element[:name]] = 1 
     end
   end
-  new_hash.map { |key, value| {"name" : key , "count": value} }
+  new_hash.map { |key, value| {"name" => key , "count"=> value} }
 end
 
 def merge_data(keys, data)
