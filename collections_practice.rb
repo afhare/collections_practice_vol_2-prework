@@ -52,7 +52,7 @@ def count_elements(data)
 end
 
 def merge_data(keys, data)
-
+  new_array = []
 end
 
 def find_cool(array)
