@@ -44,20 +44,7 @@ def count_elements(array)
 end
 
 def merge_data(keys, data)
- merged = []
- keys.each do |key|
-   first = key[:first_name]
-   info = {:first_name => first}
-   data.each do |thing|
-     if thing.keys.include?(first)
-       item[first].each do |keyed,valued|
-         info[keyed] = valued
-       end
-     end
-   end
-   merged << info
- end
- merged
+
 end
 
 def find_cool(array)
