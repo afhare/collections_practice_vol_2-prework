@@ -40,24 +40,7 @@ def remove_non_strings(array)
 end
 
 def count_elements(array)
-  element_count = {}
-  final = []
-  array.each do |thing|
-    if !element_count[thing]
-      element_count[thing] = 0 
-    end
-    element_count[thing] =+ 1 
-  end
-  
-  element_count.each do |thing, number|
-    if thing.class == Hash 
-      thing[:count] = count
-      final << thing
-    else
-      final << {:value => thing, :count => count}
-    end
-  end
-  final
+ 
 end
 
 def merge_data(keys, data)
