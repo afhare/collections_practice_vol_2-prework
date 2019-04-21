@@ -54,7 +54,7 @@ def count_elements(array)
       item[:count] = count
       final << item
     else
-      final << {:value => item, :count = count}
+      final << {:value => item, :count => count}
     end
   end
   final
@@ -80,4 +80,3 @@ def organize_schools(array)
   #array.each do |name, details|
     #location = 
 end
-
