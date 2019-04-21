@@ -60,8 +60,21 @@ def count_elements(array)
   final
 end
 
-def merge_data(array)
-  
+def merge_data(keys, data)
+ merged = []
+ keys.each do |key|
+   first = key[:first_name]
+   info = {:first_name => first}
+   data.each do |thing|
+     if thing.keys.include?(first)
+       item[first].each do |keyed,valued|
+         info[keyed] = valued
+       end
+     end
+   end
+   merged << info
+ end
+ merged
 end
 
 def find_cool(array)
@@ -77,6 +90,14 @@ end
 def organize_schools(array)
   schools_org = {}
   
-  #array.each do |name, details|
-    #location = 
+  array.each do |name, details|
+    location = details[:location]
+    if !schools_org[location]
+      schools_org[location] = []
+    end
+    if !schools_org[location].include?(name)
+      schools_org[location]<< name
+    end
+  end
+  schools_org
 end
