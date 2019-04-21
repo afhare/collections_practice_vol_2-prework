@@ -54,6 +54,17 @@ end
 def merge_data(keys, data)
   new_array = []
   
+  keys.each do |thing|
+    thing.each do |lable, value|
+      data.each do |nested_thing|
+        nested_thing.each do |key,hash|
+          if value == key 
+            new_array << thing.merge(hash)
+          end
+        end
+      end
+    end
+   new_array   
 end
 
 def find_cool(array)
