@@ -77,7 +77,7 @@ end
 def organize_schools(array)
   schools_org = {}
   
-  array.each do |name, details|
-    location = 
+  #array.each do |name, details|
+    #location = 
 end
 
