@@ -49,12 +49,12 @@ def count_elements(array)
     element_count[thing] =+ 1 
   end
   
-  element_count.each do |item, number|
-    if item.class == Hash 
-      item[:count] = count
-      final << item
+  element_count.each do |thing, number|
+    if thing.class == Hash 
+      thing[:count] = count
+      final << thing
     else
-      final << {:value => item, :count => count}
+      final << {:value => thing, :count => count}
     end
   end
   final
